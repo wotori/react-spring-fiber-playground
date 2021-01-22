@@ -1,0 +1,234 @@
+import * as THREE from 'three'
+import React, { useRef, useState, useEffect } from 'react'
+import { useFrame } from 'react-three-fiber'
+import { useGLTF } from '@react-three/drei/useGLTF'
+
+import { useAnimations } from '@react-three/drei/useAnimations'
+
+export default function CharacterWang(props) {
+  const group = useRef()
+  const { nodes, materials, animations } = useGLTF('/wang.gltf')
+  const { actions } = useAnimations(animations, group)
+  return (
+    <group ref={group} {...props} dispose={null}>
+      <primitive object={nodes.Tema_lowpoly_v0_14joint_root} />
+      <group position={[0, 0, 0]}>
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube70.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube70.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube6.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube6.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:black']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube4.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube4.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube71.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube71.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:black']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube66.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube66.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:lambert7']}
+          geometry={nodes.Tema_lowpoly_v0_14pCylinder2.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCylinder2.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:Gray']}
+          geometry={nodes.Tema_lowpoly_v0_14pCylinder5.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCylinder5.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:Red']}
+          geometry={nodes.Tema_lowpoly_v0_14polySurface2.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14polySurface2.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube10.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube10.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube9.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube9.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube3.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube3.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:DarkBlue']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube77.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube77.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:black']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube12.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube12.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:Pink']}
+          geometry={nodes.Tema_lowpoly_v0_14pCylinder11.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCylinder11.skeleton}
+          position={[0, 0, 0]}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:black']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube53.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube53.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube72.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube72.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:DarkBlue']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube75.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube75.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:black']}
+          geometry={nodes.Tema_lowpoly_v0_14polySurface1_1.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14polySurface1_1.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:Blue']}
+          geometry={nodes.Tema_lowpoly_v0_14polySurface1_2.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14polySurface1_2.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:Pink']}
+          geometry={nodes.Tema_lowpoly_v0_14pCylinder12.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCylinder12.skeleton}
+          position={[0, 0, 0]}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube8.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube8.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:lambert7']}
+          geometry={nodes.Tema_lowpoly_v0_14pSphere2.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pSphere2.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:Gray']}
+          geometry={nodes.Tema_lowpoly_v0_14pCylinder10.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCylinder10.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube69.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube69.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube11.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube11.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube68.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube68.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCylinder6.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCylinder6.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:Blue']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube76.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube76.skeleton}
+        />
+        <group position={[0, 0, 0]} rotation={[-Math.PI, 0, 0]} scale={[-1, -1, -1]}>
+          <skinnedMesh
+            material={materials['Tema_lowpoly_v0_14:Gray']}
+            geometry={nodes.Tema_lowpoly_v0_14pCube78_1.geometry}
+            skeleton={nodes.Tema_lowpoly_v0_14pCube78_1.skeleton}
+          />
+          <skinnedMesh
+            material={materials['Tema_lowpoly_v0_14:greenq']}
+            geometry={nodes.Tema_lowpoly_v0_14pCube78_2.geometry}
+            skeleton={nodes.Tema_lowpoly_v0_14pCube78_2.skeleton}
+          />
+        </group>
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube73.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube73.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube54.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube54.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:black']}
+          geometry={nodes.Tema_lowpoly_v0_14pCylinder3_1.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCylinder3_1.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:Gray']}
+          geometry={nodes.Tema_lowpoly_v0_14pCylinder3_2.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCylinder3_2.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:Pink']}
+          geometry={nodes.Tema_lowpoly_v0_14pCylinder3_3.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCylinder3_3.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCube7.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCube7.skeleton}
+        />
+        <skinnedMesh
+          material={materials['Tema_lowpoly_v0_14:White']}
+          geometry={nodes.Tema_lowpoly_v0_14pCylinder9.geometry}
+          skeleton={nodes.Tema_lowpoly_v0_14pCylinder9.skeleton}
+        />
+        <group position={[0, 0, 0]}>
+          <skinnedMesh
+            material={materials['Tema_lowpoly_v0_14:Gray']}
+            geometry={nodes.Tema_lowpoly_v0_14pCube80_1.geometry}
+            skeleton={nodes.Tema_lowpoly_v0_14pCube80_1.skeleton}
+          />
+          <skinnedMesh
+            material={materials['Tema_lowpoly_v0_14:greenq']}
+            geometry={nodes.Tema_lowpoly_v0_14pCube80_2.geometry}
+            skeleton={nodes.Tema_lowpoly_v0_14pCube80_2.skeleton}
+          />
+        </group>
+        <group position={[0, 0, 0]}>
+          <skinnedMesh
+            material={materials['Tema_lowpoly_v0_14:black']}
+            geometry={nodes.Tema_lowpoly_v0_14pCube63_1.geometry}
+            skeleton={nodes.Tema_lowpoly_v0_14pCube63_1.skeleton}
+          />
+          <skinnedMesh
+            material={materials['Tema_lowpoly_v0_14:Orange']}
+            geometry={nodes.Tema_lowpoly_v0_14pCube63_2.geometry}
+            skeleton={nodes.Tema_lowpoly_v0_14pCube63_2.skeleton}
+          />
+        </group>
+      </group>
+    </group>
+  )
+}
+
+useGLTF.preload('/wang.gltf')

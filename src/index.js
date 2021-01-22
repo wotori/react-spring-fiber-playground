@@ -2,7 +2,9 @@ import React from 'react';
 
 import ReactDOM from 'react-dom';
 import './style.css';
-import App from './AppNew';
+import App from './AppCharacterModel';
+// import App from './AppCubeTests';
+// import App from './App';
 
 
 ReactDOM.render(
