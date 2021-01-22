@@ -60,7 +60,7 @@ export default () => (
     <ambientLight />
     <spotLight position={[0, 5, 10]} penumbra={1} castShadow />
     <Controls />
-    <fog attach='fog' args={['white', 10, 20]} />
+    {/* <fog attach='fog' args={['white', 10, 20]} /> */}
     {/* <Model /> */}
     <WangCharacter />
     {/* <Box /> */}
